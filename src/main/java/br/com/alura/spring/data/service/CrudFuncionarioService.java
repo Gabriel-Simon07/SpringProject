@@ -52,10 +52,28 @@ public class CrudFuncionarioService {
 		String cpf = scanner.next();
 		System.out.println("Informe o salário do funcionário:");
 		Double salario = scanner.nextDouble();
+		//System.out.println("Informe a data de nascimento do funcionário:");
+		//String data = scanner.nexta
 		
+		//funcionario.setContratacao(contratacao);
 		funcionario.setSalario(salario);
 		funcionario.setCpf(cpf);
 		funcionario.setNome(nome);
 		funcionarioRepository.save(funcionario);
+		System.out.println("Funcionário salvo com sucesso!");
+	}
+	
+	private void atualizar(Scanner scanner) {
+		System.out.println("Atualizar:\n");
+		System.out.println("Id do funcionário: ");
+		Integer id = scanner.nextInt();
+		System.out.println("Nome do funcionário: ");
+		String nome = scanner.next();
+
+		
+
+		
+		System.out.println("Informe o id do funcionario :");
+
 	}
 }
