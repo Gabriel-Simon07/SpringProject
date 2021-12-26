@@ -6,8 +6,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import br.com.alura.spring.data.orm.Cargo;
-import br.com.alura.spring.data.repository.CargoRepository;
 import br.com.alura.spring.data.service.CrudCargoService;
 import br.com.alura.spring.data.service.CrudFuncionarioService;
 
@@ -15,13 +13,13 @@ import br.com.alura.spring.data.service.CrudFuncionarioService;
 public class SpringDataApplication implements CommandLineRunner {
 
 	private final CrudCargoService cargoService;
-	private final CrudFuncionarioService crudFuncionarioService;
+	private final CrudFuncionarioService funcionarioService;
 	
 	private Boolean system = true;
 	
-	public SpringDataApplication (CrudCargoService cargoService, CrudFuncionarioService crudFuncionarioService) {
+	public SpringDataApplication (CrudCargoService cargoService, CrudFuncionarioService funcionarioService) {
 		this.cargoService = cargoService;
-		this.crudFuncionarioService = crudFuncionarioService;
+		this.funcionarioService = funcionarioService;
 	}
 	
 	public static void main(String[] args) {
@@ -44,7 +42,7 @@ public class SpringDataApplication implements CommandLineRunner {
 				cargoService.inicial(scanner);				
 			}
 			if (action == 2) {
-				cargoService.inicial(scanner);				
+				funcionarioService.inicial(scanner);				
 			} else {
 				system = false;
 			}

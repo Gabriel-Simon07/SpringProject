@@ -20,6 +20,14 @@ public class Funcionario {
 	Double salario;
 	Date contratacao;
 	
+	public Integer getId() {
+		return id;
+	}
+	
+	public Integer setId(Integer id) {
+		return this.id = id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
